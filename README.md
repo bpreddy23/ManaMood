@@ -59,7 +59,7 @@ ManaMood/
 ├── user_voice_data/               # Auto-generated user voice profiles
 ├── user_photos/                   # User uploaded images
 │
-├── main.ipynb                     # All-in-one demo notebook
+├── MANAMOOD.ipynb                     # All-in-one demo notebook
 ├── README.md
 └── requirements.txt
 ```
