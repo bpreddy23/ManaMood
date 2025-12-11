@@ -1,11 +1,12 @@
-**🎧 ManaMood – Personalized Voice Mood Detection**
+# 🎧 **ManaMood – Personalized Voice Mood Detection**
 
 ### *A child project of PulseBond*
 
 ManaMood is an intelligent mood-detection system that identifies a user's emotional state using their **voice tone, pitch, ZCR, spectral features**, and **personalized emotional baseline**.
 It listens **only to the original user**, similar to Siri or Google Assistant, and predicts mood through machine learning based on your own voice data.
 
-This project is part of the **PulseBond emotional intelligence ecosystem**.
+This project is part of the **PulseBond-When Love Speaks it Listens**.
+
 
 
 ## 🚀 **Features**
@@ -52,15 +53,17 @@ This project is part of the **PulseBond emotional intelligence ecosystem**.
 
 ## 📂 **Project Structure**
 
-
+```
 ManaMood/
 │
 ├── user_voice_data/               # Auto-generated user voice profiles
 ├── user_photos/                   # User uploaded images
 │
-├── MANAMOOD.ipynb                     # All-in-one demo notebook
+├── main.ipynb                     # All-in-one demo notebook
 ├── README.md
 └── requirements.txt
+```
+
 
 
 ## 🧠 **How ManaMood Works**
@@ -101,6 +104,7 @@ Using KNN (k=1), ManaMood compares the new audio file with the user’s emotiona
 * 🤩 excitement → ❤️
 
 
+
 ## 📌 **Future Enhancements**
 
 * Flask backend + Render deployment
@@ -110,12 +114,9 @@ Using KNN (k=1), ManaMood compares the new audio file with the user’s emotiona
 * SQLite mood history
 * Notifications based on mood patterns
 
----
+
 
 ## 👨‍💻 **Author**
 
 **G. Bhanu Prakash Reddy**
-Creator of **ManaMood** & **PulseBond**-WHEN LOVE SPEAKS, IT LISTENS.
-✅ A **GIF-based recording UI explanation**
-
-Just tell me!
+Creator of **ManaMood** & **PulseBond**-When Love Speaks it Listens.
