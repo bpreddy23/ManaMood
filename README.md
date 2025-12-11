@@ -1,9 +1,121 @@
-# MANA MOOD APP demo
+**🎧 ManaMood – Personalized Voice Mood Detection**
 
-This is a MANA MOOD web app for detecting moods from voice samples.
+### *A child project of PulseBond*
 
-## How to Use
+ManaMood is an intelligent mood-detection system that identifies a user's emotional state using their **voice tone, pitch, ZCR, spectral features**, and **personalized emotional baseline**.
+It listens **only to the original user**, similar to Siri or Google Assistant, and predicts mood through machine learning based on your own voice data.
 
-1. Train a user: upload 6 mood audio files (naming: 1001_<username>_<Mood>_XX.wav).
-2. Upload slideshow images (for angry/sad moods).
-3. Test: upload a new audio file. If accuracy ≥ 90%, mood is predicted and slideshow/heart is shown.
+This project is part of the **PulseBond emotional intelligence ecosystem**.
+
+
+## 🚀 **Features**
+
+* 🎙️ **Record voice samples for 6 moods**
+
+  * happiness
+  * sadness
+  * anger
+  * calmness
+  * excitement
+  * romantic
+
+* 🔊 **Browser-based microphone recording** using JavaScript
+
+* 🧠 **Extract audio features**
+
+  * Pitch (F0)
+  * Zero Crossing Rate
+  * Spectral Centroid
+
+* 🤖 **Train personalized mood model** using KNN
+
+* 🎯 **Predict mood from new audio sample**
+
+* 🖼️ **Show images/slideshow for negative moods (sadness/anger)**
+
+* ❤️ **Show positive emoji for happy moods**
+
+* 🔐 **User-specific emotional profile stored as CSV**
+
+
+
+## 📌 **Tech Stack**
+
+* **Python**
+* **LibROSA** (audio feature extraction)
+* **scikit-learn** (ML model)
+* **pandas**
+* **JavaScript** (recording UI)
+* **Google Colab** (runtime)
+
+
+
+## 📂 **Project Structure**
+
+
+ManaMood/
+│
+├── user_voice_data/               # Auto-generated user voice profiles
+├── user_photos/                   # User uploaded images
+│
+├── MANAMOOD.ipynb                     # All-in-one demo notebook
+├── README.md
+└── requirements.txt
+
+
+## 🧠 **How ManaMood Works**
+
+ManaMood follows personalized emotional recognition as described in **PulseBond's voice emotion model**:
+
+### 1️⃣ Record Training Samples
+
+User records 6 mood-based voice samples using the built-in UI.
+
+### 2️⃣ Extract Audio Features
+
+For each `.wav` file, ManaMood extracts:
+
+* Average pitch (F0)
+* ZCR
+* Spectral centroid
+
+### 3️⃣ Create Personalized Emotional Profile
+
+All extracted features are saved in
+
+```
+user_voice_data/<username>_profile.csv
+```
+
+### 4️⃣ Predict Mood
+
+Using KNN (k=1), ManaMood compares the new audio file with the user’s emotional baseline and predicts the closest mood.
+
+### 5️⃣ Show Emotional Response
+
+* 😔 sadness → show slideshow
+* 😡 anger → show slideshow
+* 😊 happiness → ❤️
+* 😌 calmness → ❤️
+* 😍 romantic → ❤️
+* 🤩 excitement → ❤️
+
+
+## 📌 **Future Enhancements**
+
+* Flask backend + Render deployment
+* Auto background recording every 30 seconds
+* Speaker verification using Resemblyzer
+* Android app integration
+* SQLite mood history
+* Notifications based on mood patterns
+
+---
+
+## 👨‍💻 **Author**
+
+**G. Bhanu Prakash Reddy**
+Creator of **ManaMood** & **PulseBond**-WHEN LOVE SPEAKS, IT LISTENS.
+✅ A **GIF-based recording UI explanation**
+
+Just tell me!
